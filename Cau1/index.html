@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let arr =[];
+
+    let a =0;
+    let b =0;
+    let n;
+    do{
+        n = +prompt('Nhập số lượng phần tử mảng (<= 20)');
+
+
+    }while (n>=20);
+    for (let i = 0; i <= n; i++) {
+        let pt =+prompt('Nhap ptu thu '+i);
+        arr.push(pt);
+        if (arr[i] %2 === 0){
+            a +=arr[i]
+        }else{
+             b+= arr[i]
+        }
+    }
+    document.write('Mảng:'+arr+'</br>');
+    document.write('Hiệu của Tổng các số chẵn và Tổng các số lẻ :('+a+')-('+b+')='+(a-b));
+
+</script>
+</body>
+</html>

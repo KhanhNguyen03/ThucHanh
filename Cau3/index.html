@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr =[];
+    let n =+prompt('Nhập số lượng ptu mảng')
+    for (let i = 0; i < n; i++) {
+        let pt = +prompt('Nhap ptu thu  ' + i);
+        arr.push(pt);
+
+    }
+    function isPrime(number){
+        if (number <= 1) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    function findPrimeInArray(arr){
+        let primeNumber=[];
+        for (let i = 0; i < arr.length; i++) {
+            if (isPrime(arr[i])){
+                primeNumber.push(arr[i]);
+            }
+        }
+        return primeNumber;
+    }
+    let primeNumberInArray = findPrimeInArray(arr);
+    console.log('Số nguyên tố trong mảng:',primeNumberInArray)
+
+
+
+</script>
+</body>
+</html>
